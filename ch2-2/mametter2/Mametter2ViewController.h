@@ -1,15 +1,14 @@
 //
-//  MametterViewController.h
-//  Mametter
+//  Mametter2ViewController.h
+//  mametter2
 //
-//  Created by usr0600239 on 2012/08/28.
+//  Created by usr0600239 on 2012/09/25.
 //  Copyright (c) 2012年 kentarok.org. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MametterViewController : UIViewController
-
+@interface Mametter2ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *twitterWebView;
 
 @end
