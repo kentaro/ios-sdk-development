@@ -74,7 +74,7 @@
 
 - (void) reloadTweets {
     NSURL *twitterAPIURL = [NSURL URLWithString:
-                            @"http://api.twitter.com/1/statuses/user_timeline.json"];
+                            @"https://api.twitter.com/1/statuses/friends_timeline.json"];
     NSDictionary *twitterParams = @{};
     SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                             requestMethod:SLRequestMethodGET
