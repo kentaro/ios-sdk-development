@@ -42,7 +42,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.twitterTextView addSubview:refreshControl];
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,9 +108,9 @@
             _self.twitterTextView.text = @"";
 
             NSArray *tweets = (NSArray*) jsonResponse;
-            NSSortDescriptor *sortByText =
-            [NSSortDescriptor sortDescriptorWithKey:@"text" ascending:YES]; NSArray *sortDescriptors = @[sortByText];
-            tweets = [tweets sortedArrayUsingDescriptors:sortDescriptors];
+//            NSSortDescriptor *sortByText =
+//            [NSSortDescriptor sortDescriptorWithKey:@"text" ascending:YES]; NSArray *sortDescriptors = @[sortByText];
+//            tweets = [tweets sortedArrayUsingDescriptors:sortDescriptors];
 
             for (NSDictionary *tweetDict in tweets) {
                 NSString *tweetText = [NSString stringWithFormat:@"%@: %@ (%@)", [tweetDict valueForKeyPath:@"user.name"], [tweetDict valueForKey:@"text"], [tweetDict valueForKey:@"created_at"]];
@@ -116,6 +119,12 @@
             }
         });
     }
+}
+
+-(void) refresh
+{
+    [[self.twitterTextView.subviews objectAtIndex:3] endRefreshing];
+    [self reloadTweets];
 }
 
 @end
