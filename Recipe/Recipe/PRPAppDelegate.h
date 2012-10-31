@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PRPRecipesListViewController.h"
 
 @class PRPViewController;
 
 @interface PRPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) PRPViewController *viewController;
+@property (strong, nonatomic) PRPRecipesListViewController *viewController;
 
 @end

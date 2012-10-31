@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221AC62C1640EEA500BF0C41 /* PRPRecipesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221AC62A1640EEA500BF0C41 /* PRPRecipesListViewController.m */; };
+		221AC62D1640EEA500BF0C41 /* PRPRecipesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221AC62B1640EEA500BF0C41 /* PRPRecipesListViewController.xib */; };
+		221AC638164100A500BF0C41 /* PRPRecipesSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 221AC637164100A500BF0C41 /* PRPRecipesSource.m */; };
 		22D2F224162FC69B00CE3AC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D2F223162FC69B00CE3AC5 /* UIKit.framework */; };
 		22D2F226162FC69B00CE3AC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D2F225162FC69B00CE3AC5 /* Foundation.framework */; };
 		22D2F228162FC69B00CE3AC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D2F227162FC69B00CE3AC5 /* CoreGraphics.framework */; };
@@ -23,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221AC6291640EEA500BF0C41 /* PRPRecipesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPRecipesListViewController.h; sourceTree = "<group>"; };
+		221AC62A1640EEA500BF0C41 /* PRPRecipesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPRecipesListViewController.m; sourceTree = "<group>"; };
+		221AC62B1640EEA500BF0C41 /* PRPRecipesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRPRecipesListViewController.xib; sourceTree = "<group>"; };
+		221AC6301640FE0400BF0C41 /* PRPRecipesListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPRecipesListDataSource.h; sourceTree = "<group>"; };
+		221AC636164100A500BF0C41 /* PRPRecipesSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPRecipesSource.h; sourceTree = "<group>"; };
+		221AC637164100A500BF0C41 /* PRPRecipesSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPRecipesSource.m; sourceTree = "<group>"; };
 		22D2F21F162FC69B00CE3AC5 /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D2F223162FC69B00CE3AC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22D2F225162FC69B00CE3AC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +70,9 @@
 		22D2F214162FC69B00CE3AC5 = {
 			isa = PBXGroup;
 			children = (
+				221AC636164100A500BF0C41 /* PRPRecipesSource.h */,
+				221AC637164100A500BF0C41 /* PRPRecipesSource.m */,
+				221AC6301640FE0400BF0C41 /* PRPRecipesListDataSource.h */,
 				22D2F246162FC6B900CE3AC5 /* PRPRecipe.h */,
 				22D2F247162FC6B900CE3AC5 /* PRPRecipe.m */,
 				22D2F229162FC69B00CE3AC5 /* Recipe */,
@@ -93,6 +105,9 @@
 			children = (
 				22D2F232162FC69B00CE3AC5 /* PRPAppDelegate.h */,
 				22D2F233162FC69B00CE3AC5 /* PRPAppDelegate.m */,
+				221AC6291640EEA500BF0C41 /* PRPRecipesListViewController.h */,
+				221AC62A1640EEA500BF0C41 /* PRPRecipesListViewController.m */,
+				221AC62B1640EEA500BF0C41 /* PRPRecipesListViewController.xib */,
 				22D2F23B162FC69B00CE3AC5 /* PRPViewController.h */,
 				22D2F23C162FC69B00CE3AC5 /* PRPViewController.m */,
 				22D2F23E162FC69B00CE3AC5 /* PRPViewController.xib */,
@@ -173,6 +188,7 @@
 				22D2F23A162FC69B00CE3AC5 /* Default-568h@2x.png in Resources */,
 				22D2F240162FC69B00CE3AC5 /* PRPViewController.xib in Resources */,
 				22D2F24C162FDCDC00CE3AC5 /* cookies.jpg in Resources */,
+				221AC62D1640EEA500BF0C41 /* PRPRecipesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +203,8 @@
 				22D2F234162FC69B00CE3AC5 /* PRPAppDelegate.m in Sources */,
 				22D2F23D162FC69B00CE3AC5 /* PRPViewController.m in Sources */,
 				22D2F248162FC6B900CE3AC5 /* PRPRecipe.m in Sources */,
+				221AC62C1640EEA500BF0C41 /* PRPRecipesListViewController.m in Sources */,
+				221AC638164100A500BF0C41 /* PRPRecipesSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +321,7 @@
 				22D2F245162FC69B00CE3AC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

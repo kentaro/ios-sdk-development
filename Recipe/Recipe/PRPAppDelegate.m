@@ -7,23 +7,21 @@
 //
 
 #import "PRPAppDelegate.h"
-
 #import "PRPViewController.h"
+#import "PRPRecipe.h"
+#import "PRPRecipesSource.h"
 
 @implementation PRPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[PRPViewController alloc] initWithNibName:@"PRPViewController" bundle:nil];
 
-    PRPRecipe *recipe = [[PRPRecipe alloc] init];
-    recipe.title = @"Chocolate Chip Cookies";
-    recipe.directions = @"Put the flour and other dry ingredients in a bowl, stir in the eggs until evenly moist. Add chocolate chips and stir in until even. Place tablespoon-size portinos on greased cookie sheet and bake at 350° for 6 minutes.";
-    recipe.image = [UIImage imageNamed:@"cookies.jpg"];
-    self.viewController.recipe = recipe;
-    
+    // Override point for customization after application launch.
+    self.viewController = [[PRPRecipesListViewController alloc]
+                           initWithNibName:@"PRPRecipesListViewController"
+                           bundle:nil];
+    self.viewController.dataSource = [[PRPRecipesSource alloc] init];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
