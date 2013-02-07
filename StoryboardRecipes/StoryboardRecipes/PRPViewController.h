@@ -11,7 +11,6 @@
 
 @interface PRPViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *recipeTitle;
 @property (weak, nonatomic) IBOutlet UITextView *directionsView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
@@ -20,5 +19,4 @@
 
 @property (strong, nonatomic) PRPRecipe *recipe;
 
-- (IBAction)dismiss:(id)sender;
 @end

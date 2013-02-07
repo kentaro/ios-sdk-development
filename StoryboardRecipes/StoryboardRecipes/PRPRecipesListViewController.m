@@ -9,6 +9,7 @@
 #import "PRPRecipesListViewController.h"
 #import "PRPRecipe.h"
 #import "PRPViewController.h"
+#import "PRPRecipeEditorViewController.h"
 
 @interface PRPRecipesListViewController ()
 
@@ -111,23 +112,23 @@
 }
 */
 
-#pragma mark - Table view delegate
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([@"presentRecipeDetail" isEqualToString:segue.identifier]) {
+        NSIndexPath *index = [self.tableView indexPathForCell:sender];
+        PRPRecipe *recipe = [self.dataSource recipeAtIndex:index.row];
+        [[segue destinationViewController] setRecipe:recipe];
+    }
+    if([@"addNewRecipe" isEqualToString:segue.identifier]) {
+        PRPRecipe *recipe = [self.dataSource createNewRecipe];
+        // 6まではオッケーだけど、6.1だと↓で落ちるよ!!1
+        // destinationViewControllerが直接editorViewControllerを返すようになったようだ
+        // UIViewController *topVC = [[segue destinationViewController] topViewController];
+        // PRPRecipeEditorViewController *editor =
+        // (PRPRecipeEditorViewController *)topVC;
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-    
-    PRPViewController *detailVC = [[PRPViewController alloc]
-                                   initWithNibName:@"PRPViewController"
-                                   bundle:nil];
-    detailVC.recipe = [self.dataSource recipeAtIndex:indexPath.row];
-    [self presentViewController:detailVC animated:YES completion:nil];
+        PRPRecipeEditorViewController *editor = [segue destinationViewController];
+        editor.recipe = recipe;
+    }
 }
 
 @end
