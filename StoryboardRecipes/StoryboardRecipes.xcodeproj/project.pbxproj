@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221F370F16D4DCBD0012C34A /* brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png in Resources */ = {isa = PBXBuildFile; fileRef = 221F370E16D4DCBD0012C34A /* brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png */; };
 		229E0B0D16A80E2A000EC20D /* PRPRecipeEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E0B0B16A80E2A000EC20D /* PRPRecipeEditorViewController.m */; };
 		229E0B0E16A80E2A000EC20D /* PRPRecipeEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229E0B0C16A80E2A000EC20D /* PRPRecipeEditorViewController.xib */; };
 		22A851D1165E3A1C00CD6AB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A851D0165E3A1C00CD6AB9 /* UIKit.framework */; };
@@ -24,9 +25,11 @@
 		22A85200165E3B6000CD6AB9 /* PRPRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A851FF165E3B6000CD6AB9 /* PRPRecipe.m */; };
 		22A85203165E3B7800CD6AB9 /* PRPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A85202165E3B7800CD6AB9 /* PRPViewController.m */; };
 		22A85205165E3B8900CD6AB9 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22A85204165E3B8900CD6AB9 /* cookies.jpg */; };
+		22B9677F16CB9D0300F6D83E /* PRPDirectionsEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B9677E16CB9D0300F6D83E /* PRPDirectionsEditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221F370E16D4DCBD0012C34A /* brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png"; path = "../../../../Dropbox/brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png"; sourceTree = "<group>"; };
 		229E0B0A16A80E2A000EC20D /* PRPRecipeEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPRecipeEditorViewController.h; path = ../PRPRecipeEditorViewController.h; sourceTree = "<group>"; };
 		229E0B0B16A80E2A000EC20D /* PRPRecipeEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRPRecipeEditorViewController.m; path = ../PRPRecipeEditorViewController.m; sourceTree = "<group>"; };
 		229E0B0C16A80E2A000EC20D /* PRPRecipeEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PRPRecipeEditorViewController.xib; path = ../PRPRecipeEditorViewController.xib; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 		22A85201165E3B7800CD6AB9 /* PRPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPViewController.h; sourceTree = "<group>"; };
 		22A85202165E3B7800CD6AB9 /* PRPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPViewController.m; sourceTree = "<group>"; };
 		22A85204165E3B8900CD6AB9 /* cookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cookies.jpg; sourceTree = "<group>"; };
+		22B9677D16CB9D0300F6D83E /* PRPDirectionsEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPDirectionsEditorViewController.h; sourceTree = "<group>"; };
+		22B9677E16CB9D0300F6D83E /* PRPDirectionsEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPDirectionsEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 				22A851CF165E3A1C00CD6AB9 /* Frameworks */,
 				22A851CD165E3A1C00CD6AB9 /* Products */,
 				22A85204165E3B8900CD6AB9 /* cookies.jpg */,
+				221F370E16D4DCBD0012C34A /* brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,17 +111,19 @@
 				229E0B0B16A80E2A000EC20D /* PRPRecipeEditorViewController.m */,
 				229E0B0C16A80E2A000EC20D /* PRPRecipeEditorViewController.xib */,
 				22A851FD165E3B4D00CD6AB9 /* PRPRecipesListDataSource.h */,
-				22A851FA165E3B3700CD6AB9 /* PRPRecipesSource.h */,
 				22A851FE165E3B6000CD6AB9 /* PRPRecipe.h */,
 				22A851FF165E3B6000CD6AB9 /* PRPRecipe.m */,
+				22A851FA165E3B3700CD6AB9 /* PRPRecipesSource.h */,
 				22A851FB165E3B3700CD6AB9 /* PRPRecipesSource.m */,
-				22A851F7165E3B1C00CD6AB9 /* PRPRecipesListViewController.h */,
 				22A85201165E3B7800CD6AB9 /* PRPViewController.h */,
 				22A85202165E3B7800CD6AB9 /* PRPViewController.m */,
+				22A851F7165E3B1C00CD6AB9 /* PRPRecipesListViewController.h */,
 				22A851F8165E3B1C00CD6AB9 /* PRPRecipesListViewController.m */,
 				22A851DF165E3A1C00CD6AB9 /* PRPAppDelegate.h */,
 				22A851E0165E3A1C00CD6AB9 /* PRPAppDelegate.m */,
 				22A851E8165E3A1C00CD6AB9 /* MainStoryboard.storyboard */,
+				22B9677D16CB9D0300F6D83E /* PRPDirectionsEditorViewController.h */,
+				22B9677E16CB9D0300F6D83E /* PRPDirectionsEditorViewController.m */,
 				22A851D7165E3A1C00CD6AB9 /* Supporting Files */,
 			);
 			path = StoryboardRecipes;
@@ -194,6 +202,7 @@
 				22A851EA165E3A1C00CD6AB9 /* MainStoryboard.storyboard in Resources */,
 				22A85205165E3B8900CD6AB9 /* cookies.jpg in Resources */,
 				229E0B0E16A80E2A000EC20D /* PRPRecipeEditorViewController.xib in Resources */,
+				221F370F16D4DCBD0012C34A /* brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +220,7 @@
 				22A85200165E3B6000CD6AB9 /* PRPRecipe.m in Sources */,
 				22A85203165E3B7800CD6AB9 /* PRPViewController.m in Sources */,
 				229E0B0D16A80E2A000EC20D /* PRPRecipeEditorViewController.m in Sources */,
+				22B9677F16CB9D0300F6D83E /* PRPDirectionsEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

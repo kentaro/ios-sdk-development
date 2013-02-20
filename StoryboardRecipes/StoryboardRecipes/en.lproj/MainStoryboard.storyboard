@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Recipes" id="kGM-e7-jx7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n8F-hW-2jP">
                             <connections>
-                                <segue destination="Scz-Xf-m1M" kind="modal" identifier="addNewRecipe" id="aCt-pC-YGQ"/>
+                                <segue destination="Scz-Xf-m1M" kind="push" identifier="addNewRecipe" id="aCt-pC-YGQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,11 +66,12 @@
             <objects>
                 <viewController id="Scz-Xf-m1M" customClass="PRPRecipeEditorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3aS-V5-8EV">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMM-kj-9Vo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMM-kj-9Vo">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="jKu-nc-Ufm"/>
                                     <constraint firstAttribute="width" constant="240" id="nbS-LU-iPQ"/>
@@ -78,6 +79,9 @@
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Aw2-GV-r0m" appends="YES" id="3V6-Wf-rX2"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prep Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yv-Y3-ZDM">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -89,11 +93,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTp-dk-b65">
+                            <imageView contentMode="scaleToFill" image="brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png" translatesAutoresizingMaskIntoConstraints="NO" id="pTp-dk-b65">
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="DPL-qi-NfD"/>
                                     <constraint firstAttribute="height" constant="259" id="OXF-ys-s03"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UCE-hU-KZv" appends="YES" id="kUG-DN-zjg"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9BE-3I-Ix9">
                                 <constraints>
@@ -117,17 +125,23 @@
                             <constraint firstItem="9BE-3I-Ix9" firstAttribute="leading" secondItem="3aS-V5-8EV" secondAttribute="leading" constant="51" id="FXx-mp-04o"/>
                             <constraint firstItem="9BE-3I-Ix9" firstAttribute="top" secondItem="3aS-V5-8EV" secondAttribute="top" constant="26" id="GA2-JF-d5o"/>
                             <constraint firstItem="KFO-Y4-uJG" firstAttribute="bottom" secondItem="pGO-zh-CMp" secondAttribute="bottom" type="default" id="Jca-QQ-HIa"/>
-                            <constraint firstItem="KFO-Y4-uJG" firstAttribute="trailing" secondItem="pTp-dk-b65" secondAttribute="trailing" type="default" id="XZC-AK-Y8Z"/>
+                            <constraint firstItem="pTp-dk-b65" firstAttribute="centerX" secondItem="zMM-kj-9Vo" secondAttribute="centerX" type="default" id="P9x-EA-z1K"/>
+                            <constraint firstItem="pTp-dk-b65" firstAttribute="top" secondItem="3aS-V5-8EV" secondAttribute="top" constant="257" id="Vf4-n2-qiN"/>
                             <constraint firstItem="KFO-Y4-uJG" firstAttribute="top" secondItem="3aS-V5-8EV" secondAttribute="top" constant="211" id="YRN-4d-umi"/>
                             <constraint firstItem="zMM-kj-9Vo" firstAttribute="top" secondItem="9BE-3I-Ix9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ZmX-9Z-5Vt"/>
-                            <constraint firstItem="zMM-kj-9Vo" firstAttribute="centerX" secondItem="3aS-V5-8EV" secondAttribute="centerX" type="default" id="kHc-n0-Snx"/>
+                            <constraint firstAttribute="trailing" secondItem="KFO-Y4-uJG" secondAttribute="trailing" constant="13" id="bYy-HE-qQX"/>
                             <constraint firstItem="pGO-zh-CMp" firstAttribute="baseline" secondItem="5yv-Y3-ZDM" secondAttribute="baseline" type="default" id="m3q-rE-8xT"/>
                             <constraint firstItem="9BE-3I-Ix9" firstAttribute="leading" secondItem="5yv-Y3-ZDM" secondAttribute="leading" type="default" id="o8S-hF-V0x"/>
-                            <constraint firstItem="pTp-dk-b65" firstAttribute="top" secondItem="3aS-V5-8EV" secondAttribute="top" constant="258" id="qNb-Gf-hOv"/>
-                            <constraint firstItem="pTp-dk-b65" firstAttribute="leading" secondItem="3aS-V5-8EV" secondAttribute="leading" constant="32" id="rJR-Ev-f0K"/>
+                            <constraint firstItem="pTp-dk-b65" firstAttribute="centerX" secondItem="3aS-V5-8EV" secondAttribute="centerX" type="default" id="tE8-2n-A0p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Recipe" id="QbA-G3-mje"/>
+                    <navigationItem key="navigationItem" title="Edit Recipe" id="QbA-G3-mje">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="oxi-1p-IIV">
+                            <connections>
+                                <action selector="done:" destination="Scz-Xf-m1M" id="Scn-av-USu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="directionsText" destination="zMM-kj-9Vo" id="Xdt-Q6-qNC"/>
                         <outlet property="prepTimeLabel" destination="pGO-zh-CMp" id="QTR-PL-JGX"/>
@@ -137,8 +151,69 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="co2-WP-q2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Aw2-GV-r0m">
+                    <connections>
+                        <outlet property="delegate" destination="Scz-Xf-m1M" id="ZbX-ae-rh7"/>
+                        <segue destination="CNF-ZO-711" kind="push" identifier="editDirections" id="NIY-7R-bkS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UCE-hU-KZv" userLabel="Image Gesture Recognizer">
+                    <connections>
+                        <segue destination="UvE-TP-uPs" kind="modal" identifier="choosePhoto" id="eDh-sH-F3P"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1177" y="-793"/>
+            <point key="canvasLocation" x="846" y="-993"/>
+        </scene>
+        <!--Directions Editor View Controller-->
+        <scene sceneID="77h-83-Wfx">
+            <objects>
+                <viewController id="CNF-ZO-711" customClass="PRPDirectionsEditorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfK-iF-tLB">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57O-Yx-pY0">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CNF-ZO-711" id="YgM-RA-2bH"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="57O-Yx-pY0" firstAttribute="bottom" secondItem="cfK-iF-tLB" secondAttribute="bottom" type="default" id="GZZ-PP-V9P"/>
+                            <constraint firstItem="57O-Yx-pY0" firstAttribute="trailing" secondItem="cfK-iF-tLB" secondAttribute="trailing" type="default" id="MCn-cp-c93"/>
+                            <constraint firstItem="57O-Yx-pY0" firstAttribute="top" secondItem="cfK-iF-tLB" secondAttribute="top" type="default" id="fqG-tX-kj9"/>
+                            <constraint firstItem="57O-Yx-pY0" firstAttribute="leading" secondItem="cfK-iF-tLB" secondAttribute="leading" type="default" id="sKc-oN-O6n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3OU-9E-MaI"/>
+                    <connections>
+                        <outlet property="textView" destination="57O-Yx-pY0" id="lAC-Zx-2x4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sr4-Hm-LeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1499" y="-503"/>
+        </scene>
+        <!--Image Picker Controller-->
+        <scene sceneID="6vF-7R-AoH">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="UvE-TP-uPs" customClass="UIImagePickerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Wf-2v-aKN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPx-Pl-l04" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1347" y="-1098"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uAA-A6-6BY">
@@ -235,16 +310,24 @@
         </scene>
     </scenes>
     <resources>
+        <image name="brothers0-53c621c369c5ec498c49bfd5a9eb6b12.png" width="120" height="120"/>
         <image name="cookies.jpg" width="400" height="370"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="PRPDirectionsEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PRPDirectionsEditorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
         <class className="PRPRecipeEditorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PRPRecipeEditorViewController.h"/>
             <relationships>
                 <relationship kind="action" name="changePreparationTime:" candidateClass="UIStepper"/>
+                <relationship kind="action" name="done:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="directionsText" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="prepTimeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="prepTimeStepper" candidateClass="UIStepper"/>

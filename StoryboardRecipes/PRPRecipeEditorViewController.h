@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PRPRecipesListViewController.h"
 
 @class PRPRecipe;
 @interface PRPRecipeEditorViewController : UIViewController
-<UITextFieldDelegate>
+<UITextFieldDelegate, UIImagePickerControllerDelegate>
 
 @property(nonatomic, strong) PRPRecipe *recipe;
 @property(nonatomic, strong) NSNumberFormatter *formatter;
@@ -19,6 +20,9 @@
 @property(nonatomic, strong) IBOutlet UILabel *prepTimeLabel;
 @property(nonatomic, strong) IBOutlet UIImageView *recipeImage;
 @property(nonatomic, strong) IBOutlet UIStepper *prepTimeStepper;
+@property(nonatomic, weak) PRPRecipesListViewController *recipeListVC;
 
 - (IBAction)changePreparationTime:(UIStepper *)sender;
+- (IBAction)done:(UIBarButtonItem *)sender;
+
 @end
